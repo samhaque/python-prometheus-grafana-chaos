@@ -3,7 +3,7 @@ version: "3"
 services:  
     prometheus:
         container_name: prometheus
-        image: prom/prometheus:v2.28.0
+        image: prom/prometheus:v2.39.1
         ports:
             - 9090:9090
         volumes:
@@ -23,12 +23,10 @@ services:
         command: python app.py runserver 0.0.0.0:5000
         networks:
             - backend
-        # volumes:
-        #     - "./api/app.py:/app.py"
 
     grafana:
         container_name: grafana
-        image: grafana/grafana:7.5.9
+        image: grafana/grafana:8.2.6
         ports:
             - "3000:3000"
         depends_on:

@@ -1,6 +1,6 @@
 global:
-  scrape_interval:     15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
-  evaluation_interval:  15s # Evaluate rules every 15 seconds. The default is every 1 minute.
+  scrape_interval: 5s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+  evaluation_interval: 5s # Evaluate rules every 15 seconds. The default is every 1 minute.
   # scrape_timeout is set to the global default (10s).
 
 scrape_configs:
@@ -9,5 +9,5 @@ scrape_configs:
     honor_labels: true
     # scrape_interval: 5s
     static_configs:
-      - targets: 
-        - 'api1:5000'
+      - targets:
+          - 'api1:5000'
